@@ -54,7 +54,7 @@ class JogoDaForca(JogoBase):
 
     def iniciar(self):
         self.__escolher_palavra()
-        print("Bem-vindo ao Jogo da Forca! Tema: Times de Futebol")
+        print("Bem-vindo ao Jogo da Forca! O Tema de hoje é: Times do Brasileirão 2024!")
         
         while self.__tentativas > 0 and '_' in self.__letras_descobertas:
             self.__exibir_status()
@@ -64,17 +64,17 @@ class JogoDaForca(JogoBase):
                 continue
 
             if letra in self.__letras_descobertas or letra in self.__letras_erradas:
-                print("Você já tentou essa letra. Tente outra.")
+                print("Você já digitou essa letra, tente digitar uma diferente.")
                 continue
 
             self.__verificar_letra(letra)
 
         if '_' not in self.__letras_descobertas:
-            print("\nParabéns! Você venceu!")
-            print("A palavra era:", self.__palavra_secreta)
+            print("\nParabéns! Você acertou!")
+            print("O time era:", self.__palavra_secreta)
         else:
-            print("\nVocê perdeu. Suas tentativas acabaram.")
-            print("A palavra era:", self.__palavra_secreta)
+            print("\n Você não conseguiu acertar o time, boa sorte na próxma vez.")
+            print("O time era:", self.__palavra_secreta)
 
 class GerenciadorDePalavras:
     """Classe para gerenciar as palavras do jogo."""
@@ -110,7 +110,7 @@ if __name__ == "__main__":
         palavras = gerenciador.obter_palavras()
         jogo = JogoDaForca(palavras)
         jogo.iniciar()
-        jogar_novamente = input("Deseja continuar jogando? (s/n): ").strip().lower()
+        jogar_novamente = input("Deseja continuar jogando? Digite(s/n): ").strip().lower()
         if jogar_novamente != 's':
-            print("Obrigado por jogar, volte sempre!.")
+            print("Obrigado por jogar, espero que tenha gostado, volte sempre!.")
             break
