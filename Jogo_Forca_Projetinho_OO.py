@@ -28,14 +28,14 @@ class JogoDaForca(JogoBase):
     def __init__(self, palavras):
         self.__palavras = palavras
         self.__palavra_secreta = ''
-        self.__tentativas = 6
+        self.__tentativas = 5
         self.__letras_descobertas = []
         self.__letras_erradas = []
 
     def __escolher_palavra(self):
         self.__palavra_secreta = random.choice(self.__palavras).upper()
         self.__letras_descobertas = ['_'] * len(self.__palavra_secreta)
-        self.__tentativas = 6
+        self.__tentativas = 5
         self.__letras_erradas = []
 
     def __exibir_status(self):
@@ -110,7 +110,7 @@ if __name__ == "__main__":
         palavras = gerenciador.obter_palavras()
         jogo = JogoDaForca(palavras)
         jogo.iniciar()
-        jogar_novamente = input("Deseja jogar novamente? (s/n): ").strip().lower()
+        jogar_novamente = input("Deseja continuar jogando? (s/n): ").strip().lower()
         if jogar_novamente != 's':
-            print("Obrigado por jogar! Até a próxima.")
+            print("Obrigado por jogar, volte sempre!.")
             break
