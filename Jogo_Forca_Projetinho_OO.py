@@ -99,7 +99,7 @@ if __name__ == "__main__":
         "Botafogo", "Palmeiras", "Flamengo", "Fortaleza", "Internacional",
         "São Paulo", "Corinthians", "Bahia", "Cruzeiro", "Vasco da Gama",
         "Vitória", "Atlético Mineiro", "Fluminense", "Grêmio", "Cuiabá",
-        "Red Bull Bragantino", "Santos", "Goiás", "Athletico Paranaense",
+        "Red Bull Bragantino", "Santos", "Juventude", "Athletico Paranaense",
         "Criciúma"
     ]
 
